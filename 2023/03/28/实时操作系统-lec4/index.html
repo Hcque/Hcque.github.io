@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
   
-  <title>Archives: 2023 - Hexo</title>
+  <title>实时操作系统 lec4 - Hexo</title>
   
     <link rel="shortcut icon" href="/favicon.png">
   
@@ -16,13 +16,17 @@
   
   
   
-  <meta property="og:title" content="Archives: 2023 - Hexo" />
+  <meta property="og:title" content="实时操作系统 lec4 - Hexo" />
   
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content="article" />
   
-  <meta property="og:url" content="http://example.com/archives/2023/index.html" />
+  <meta property="og:url" content="http://example.com/2023/03/28/%E5%AE%9E%E6%97%B6%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-lec4/index.html" />
   
   <meta property="og:image" content="/favicon.png" />
+  
+  <meta property="og:article:published_time" content="2023-03-28T08:58:37.000Z" />
+  
+  <meta property="og:article:author" content="John Doe" />
   
   
 
@@ -70,10 +74,6 @@
 <link rel="stylesheet" href="/css/post.css">
 
   
-  
-  
-<link rel="stylesheet" href="/css/archive.css">
-
   
   
   
@@ -147,78 +147,87 @@
         </div>
     </div>
 </nav>
-        <div class="container">
+        
+<article class="post">
     <div class="meta">
-        <div class="type">
-            
-            
-        </div>
+        
 
-        <h2 class="title">Archives</h2>
+        
+        <div class="date" id="date">
+            <span>March</span>
+            <span>28,</span>
+            <span>2023</span>
+        </div>
+        
+
+        <h2 class="title">实时操作系统 lec4</h2>
     </div>
 
     <div class="divider"></div>
 
-    <div class="post-list archives">
+    <div class="content">
+        <p>高效处理逻辑，引脚， 反馈， 完全并行化， 通用器件， 动态效果，这种需求场景： FPGA</p>
+<p>组合真值表可以遍历，<br>4000-5000， 可以做一颗arm cpu，<br>想描述逻辑功能， 用高级语言： verilog： 描述， 输入和输出的逻辑关系， 上电，<br>综合器， 是逻辑求解，和solver 类似。</p>
+<p>硬核， 在集成工具里，做特殊通信网卡， 高速设备， 特定的加速能力， cpu吧数据传递给FPGA， 它就是电路， 物理上并行， 不是执行指令。</p>
+<p>在intel， cpu灵活执行指令，fpga通用硬件， 两者配合， 可以软件定型化。通用 + 专业。</p>
+<p>openCL， 计算库，FPGA 一瞬间产生。PCIe 网卡，<br>人类基因组计划： 测序工作， 计算加速网卡， 定制算法库。<br>特定算法， 固化成运行加速网卡， </p>
+<p>规模扩张， gpt4和百度， 差距非常大，<br>人口红利， 竞争性， 困难， 实际， 找工作很难， 市场和国家，区分度。<br>东亚地区，发展比较早，日本， 新加坡， “真”博士。<br>”美国大片“<br>编码能力， 思维逻辑的体现，把事情搞定， 被社会所依仗，”怎么办的人“</p>
+<p>RAM， 内存， 可持久化， imbedded 的mem， 有状态独立可工作， 上电顺序， 对于功耗的影响，对于高速互联的东西的影响。</p>
+<p>工具链很清晰，配一下完事， 软件组件， 自动生成骨架，<br>cpu 的代码，<br>在逻辑视图画出。</p>
+<p>外在接口表象， 插槽是总线？ 而是FPGA，背板上直接跑，不需要CPU， 控制系统不要CPU介入。</p>
+<p>”工业革命“ 发生在英国 ?<br>葡萄牙， 西班牙， ？</p>
+<p>科技不前， 中南美洲， 黄金， 北美， 种植， 采矿， 劳动力介入， 动力科技， 弥补劳动力缺失。”缺人“， 驱动力强。<br>我们不是， 人多， 核心驱动力不强， 人口负增长， 独生子女， 对于生产力， 劳动力的渴望。</p>
+<p>MVC: 向量化终端控制器：<br>不间歇执行，<br>1 轮询：cpu费电：功耗，低功耗编程（物联网）<br>软件： 事件驱动， 硬件：新的计算方式？<br>2 中断： 处理器初始化， ”中断向量表“， 不同中断号码， 有地址，跳转到对应地址。<br>听起来很简单，  不同处理器架构，<br>苹果， 特别： 不是跳表地址， 而是机器指令2-4条（立即执行），<br>非常简单的事：立即执行。<br>留了余量： 如对某些寄存器的特殊保护，<br>速度非常快， 流水线清空。CPU PC指针压栈机制：浪费了非常多的时钟周期，”有点郁闷“，压栈-改-弹出<br>CPU不能保存上下文。</p>
+<p>优雅而通用， 毫无疑问， 效能却更低，所以看应用场景， 不是什么都要统一。<br>软件， 可以通过叠加硬件， 不需要太多优化。</p>
+<p>中断处理时， 来了新中断？<br>向量化的中断控制器， 机制， 嵌套，会判断优先级priority,  不会打断， 放入队列。<br>以前：独立的器件， 硬件直接做掉。</p>
+<p>另外一个问题： 很多CPU 核心， 中断控制器有多少个？<br>一个， 多个问题： 中断引脚， 绑定了一个核心， 多一个维度信息， 中断向量号， 多核， 指定核， 自由随机分配。</p>
+<p>“第一号核， 永远是最忙的”， 核0， 非常强势说” 网卡， 显卡， 用户以独占方式跑应用。用户强势独占。</p>
+<p>linux 中断， 变成系统消息队列的消息， 各个核可以取， 坏处： 响应事件变长， “消费”， 响应。<br>win 性能IO 最高， 最贴近工程。10% 的性能差， 娱乐导向。<br>高性能计算（游戏）， 即刻响应。而不是考虑如何扩展。</p>
+<p>计算量分摊， 有帮助。<br>一个工作站， 两块显卡， 插在？连在1， 2， 号cpu， </p>
+<p>时钟振荡器： 多个时钟，“压电谐振”，<br>cpu， 内存， 有自己的时钟，<br>锁相环： 相位相同： 振一次， 10次。<br>可以调频率。物理器件来实现。<br>和操作系统关系？ 初始化， 适配频率， 没有办法正常工作， 引导系统开始， 畅行无阻？ 配置系统可以工作， 不正常 / 半正常。</p>
+<p>上电顺序，电源管理芯片， 供电需求，形成电压， 上电顺序。</p>
+<p>RAM：<br>两种分类：SRAM： 易失性存储，数据丢失， 文件系统，<br>蓝屏报错， 掉电，win95 很正常。</p>
+<p>安全攸关， 硬件设计：<br>1cpu中断信号： 掉电<br>2系统存储区域有短时间储能： 电容。</p>
+<p>写入操作的原子性。<br>不会新的写。</p>
+<p>cpu可知，维持储能/能源保存。<br>然后是软件层： 格式支持事务化能力。<br>文件系统： 新的地方，成功才修改。</p>
+<p>频繁写入： 数据块化， txn 空间占用。</p>
+<p>SDRAM： synchronized<br>DDR5，及其高速。</p>
+<p>GPU： 带宽需求很大，HBM： 高带宽。</p>
+<p>程序， 只读， ”烧录“<br>ROM， 叫BIOS，可以引导操作系统。<br>上电，载入设备管理初始化，<br>存储介质： 硬盘盘， 网络， 引导 OS loader （ boot loader ）</p>
+<p>主板插了多少， mac， 没引导， wifi可用。</p>
+
+    </div>
+
+    
+    <div class="about">
+        <h1>About this Post</h1>
+        <div class="details">
+            <p>This post is written by John Doe, licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc/4.0">CC BY-NC 4.0</a>.</p>
+        </div>
         
-        <article class="post-list-item">
-            <a href="/2023/03/28/%E5%AE%9E%E6%97%B6%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-lec4/">
-                
-                <div class="content">
-                    
-                    <div class="title">
-                        实时操作系统 lec4
-                    </div>
-                    
-                    <div class="time">
-                        <span>March</span>
-                        <span>&nbsp;28,&nbsp;</span>
-                        <span>2023</span>
-                    </div>
-                </div>
-            </a>
-        </article>
+    </div>
+    
+
+    <div class="container post-prev-next">
+        <a class="next"></a>
         
-        <article class="post-list-item">
-            <a href="/2023/03/28/%E4%BA%91%E8%AE%A1%E7%AE%97-lec3/">
-                
-                <div class="content">
-                    
-                    <div class="title">
-                        云计算 lec3
-                    </div>
-                    
-                    <div class="time">
-                        <span>March</span>
-                        <span>&nbsp;28,&nbsp;</span>
-                        <span>2023</span>
-                    </div>
+        <a href="/2023/03/28/%E4%BA%91%E8%AE%A1%E7%AE%97-lec3/" class="prev">
+            <div>
+                <div class="text">
+                    <p class="label">Previous</p>
+                    <h3 class="title">云计算 lec3</>
                 </div>
-            </a>
-        </article>
-        
-        <article class="post-list-item">
-            <a href="/2023/03/28/hello-world/">
-                
-                <div class="content">
-                    
-                    <div class="title">
-                        Hello World
-                    </div>
-                    
-                    <div class="time">
-                        <span>March</span>
-                        <span>&nbsp;28,&nbsp;</span>
-                        <span>2023</span>
-                    </div>
-                </div>
-            </a>
-        </article>
+            </div>
+        </a>
         
     </div>
 
     
-</div>
+        
+        
+    
+</article>
+
         <footer>
     <div class="inner">
         <div class="links">
